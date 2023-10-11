@@ -1,15 +1,29 @@
-import arcade
-import time;
+'''
+A class is a type
+- int is a class
+- str is a class
+- list is a class
+- you get the point!
 
-def main(): 
-    window = arcade.open_window(800, 600, 'dsflk')
-    window.background_color = arcade.csscolor.SKY_BLUE
+objects: basically anything that takes up memory
+- examples: 3, 'hello', [1,2,3], {'n':0, 'o':1}
+- called an INSTANCE of a class
+'''
 
-    arcade.start_render()
-    # arcade.draw_lrtb_rectangle_filled(0, 800, 300, 0, arcade.csscolor.GREEN)
-    arcade.draw_xywh_rectangle_filled(0, 0, 800, 300, arcade.csscolor.AZURE)
-    arcade.finish_render()
-    arcade.run()
+theList = list()
+print(type(theList) == list)
+theTuple = tuple([1,2,3]) # convert a list to a tuple;
+print(f"theList: {theList}, theTuple: {theTuple}");
 
+class Foo:
+    def __init__(self, weight, height):
+        self.weight = weight #property
+        self.height = height
+        pass;
 
-main()
+theFoo = Foo(0,1)
+theOtherFoo = Foo(weight=0, height=1)
+print(type(theFoo) == Foo)
+print('----------------')
+
+class Bar:pass;
