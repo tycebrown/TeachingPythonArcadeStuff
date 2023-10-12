@@ -8,22 +8,48 @@ A class is a type
 objects: basically anything that takes up memory
 - examples: 3, 'hello', [1,2,3], {'n':0, 'o':1}
 - called an INSTANCE of a class
+
+To create an object (generally):
+- typeOfObject(arguments, ...);
+- like a function call (called a constructor)
+- examples:
+  - list() #creates empty list
+  - Square(10) #creates a square with a side lenght of 10 (going to make 10x10 square)
 '''
 
-theList = list()
-print(type(theList) == list)
-theTuple = tuple([1,2,3]) # convert a list to a tuple;
-print(f"theList: {theList}, theTuple: {theTuple}");
 
-class Foo:
-    def __init__(self, weight, height):
-        self.weight = weight #property
-        self.height = height
-        pass;
+# make a class; call it Cat
+# Cat('winchester', 13)
 
-theFoo = Foo(0,1)
-theOtherFoo = Foo(weight=0, height=1)
-print(type(theFoo) == Foo)
-print('----------------')
+class Square:
+    def __init__(self, length):
+        self.length = length;
 
-class Bar:pass;
+theSquare = Square(10);
+
+class Car:
+    def __init__(self, speed, color):
+        self.speed = speed;
+        self.color = color;
+
+chevy = Car(69, 'red');
+
+class Cat: 
+    def __init__(self, name, age):
+        self.name = name;
+        self.age = age;
+
+theCat = Cat('winchester', 13)
+print(theCat.name);
+print(theCat.age);
+
+
+
+
+
+
+
+
+
+
+
